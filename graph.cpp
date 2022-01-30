@@ -222,8 +222,10 @@ public:
 			visited[i] = false;
 		while (!s.empty()) {
 			int x = s.top();
-			if(!visited[x])
-				gr.DFSUtil(x, visited);		  
+			if (!visited[x]) {
+				gr.DFSUtil(x, visited);
+				cout << endl;
+			}
 			s.pop();
 		}	   
 	}
@@ -550,15 +552,15 @@ namespace Tests {
 }
 
 int main() {
-	Tests::BFSTest();
+	/*Tests::BFSTest();
 	Tests::DFSTest();
 	Tests::CyclicTest();
-	Tests::TopologicalSortTest();
+	Tests::TopologicalSortTest();	*/
 	Tests::SCCTest();
-	Tests::PrimsTest();
+	/*Tests::PrimsTest();
 	Tests::KruskalTest();
 	Tests::DijkstraTest();
 	Tests::BellmanFordTest();
-	Tests::FloydWarshallTest();
+	Tests::FloydWarshallTest();	 */
 	return 0;
 }
